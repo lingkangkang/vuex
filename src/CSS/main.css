@@ -1,0 +1,38 @@
+/*@media only screen and (min-width: 320px){html {font-size: 10px;}}*/
+/*@media only screen and (min-width: 360px){html {font-size: 12px;}}*/
+/*@media only screen and (min-width: 780px){html {font-size: 14px;}}*/
+.headCenter {
+  text-align: center;
+}
+
+.padding2 {
+  padding-bottom: 2%;
+}
+
+.videoTips {
+  position: fixed;
+  width: 90%;
+  top: 30%;
+}
+
+.blackBg {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+.zIndex11{
+  z-index: 11;
+}
+.top20{
+  top:20%
+}
+.colorWhite{
+  color: #ffffff;
+}
+
