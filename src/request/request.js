@@ -19,7 +19,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 export function request({method, url, params,type}){
    switch (type){
      case "yy":
-      // axios.defaults.baseURL = '/api1'
+       axios.defaults.baseURL = '/api1'
        break;
      case "tq":
        axios.defaults.baseURL = '/api'

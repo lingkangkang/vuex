@@ -48,9 +48,9 @@
           this.showWeather=true
           var requestData={
             method:"Get",
-            url:"/weatherApi",
+            url:"https://www.apiopen.top/weatherApi",
             params:{city:city},
-            type:'tq'
+            type:'yyt'
           }
           var _this=this
          request(requestData).then(function (data) {
