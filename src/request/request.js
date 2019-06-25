@@ -17,16 +17,16 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 
 //对外接口
 export function request({method, url, params,type}){
-   // switch (type){
-   //   case "yy":
-   //     axios.defaults.baseURL = '/api1'
-   //     break;
-   //   case "tq":
-   //     axios.defaults.baseURL = '/api'
-   //     break;
-   //   default:
-   //     break;
-   // }
+   switch (type){
+     case "yy":
+      // axios.defaults.baseURL = '/api1'
+       break;
+     case "tq":
+       axios.defaults.baseURL = '/api'
+       break;
+     default:
+       break;
+   }
 
   if(method == 'Get'){
     return get(url, params);

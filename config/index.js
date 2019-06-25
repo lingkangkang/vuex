@@ -11,20 +11,20 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {/*解决跨域 针对不同接口设置跨域*/
-      // '/api':{
-      //   target: "https://www.apiopen.top",
-      //   changeOrigin:true,
-      //   pathRewrite:{
-      //     '^/api':''
-      //   }
-      // },
-      // '/api1':{
-      //   target: "https://api.apiopen.top",
-      //   changeOrigin:true,
-      //   pathRewrite:{
-      //     '^/api1':''
-      //   }
-      // }
+      '/api':{
+        target: "https://www.apiopen.top",
+        changeOrigin:true,
+        pathRewrite:{
+          '^/api':''
+        }
+      },
+      '/api1':{
+        target: "https://api.apiopen.top",
+        changeOrigin:true,
+        pathRewrite:{
+          '^/api1':''
+        }
+      }
     },
 
     // Various Dev Server settings
