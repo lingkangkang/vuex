@@ -11,24 +11,24 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {/*解决跨域 针对不同接口设置跨域*/
-      '/api':{
-        target: "https://www.apiopen.top",
-        changeOrigin:true,
-        pathRewrite:{
-          '^/api':''
-        }
-      },
-      '/api1':{
-        target: "https://api.apiopen.top",
-        changeOrigin:true,
-        pathRewrite:{
-          '^/api1':''
-        }
-      }
+      // '/api':{
+      //   target: "https://www.apiopen.top",
+      //   changeOrigin:true,
+      //   pathRewrite:{
+      //     '^/api':''
+      //   }
+      // },
+      // '/api1':{
+      //   target: "https://api.apiopen.top",
+      //   changeOrigin:true,
+      //   pathRewrite:{
+      //     '^/api1':''
+      //   }
+      // }
     },
 
     // Various Dev Server settings
-    host: '192.168.2.134', // can be overwritten by process.env.HOST
+    host: '180.100.223.246', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
