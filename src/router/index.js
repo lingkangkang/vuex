@@ -44,6 +44,14 @@ export default new Router({
             title: '音悦台'
           }
         },
+        {
+          path: '/myGirl',
+          //name: 'HelloWorld',
+          component: () => import('@/components/myGirl'),/*懒加载路由 防止路由过多页面加载慢*/
+          meta: {
+            title: 'myGirl'
+          }
+        },
       ]
     }
 

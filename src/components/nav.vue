@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
   <ul class="nav">
-    <li @click="changeNav(value)"  v-for="value in navList" role="presentation" ><span  class="glyphicon glyphicon-list"></span>{{value.title}}</li>
+    <li class="padding2" @click="changeNav(value)"  v-for="value in navList" role="presentation" ><span  class="glyphicon glyphicon-list"></span>{{value.title}}</li>
   </ul>
   <div>
     <router-view/>
@@ -15,7 +15,7 @@
         name: "navL",
       data(){
           return{
-            navList:[{route:'/weather',title:'天气查询'},{route:'/listenSong',title:'音悦台'}]
+            navList:[{route:'/weather',title:'天气查询'},{route:'/listenSong',title:'音悦台'},{route:'/myGirl',title:'myGirl'}]
         }
       },
       created:function () {
