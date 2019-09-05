@@ -1,5 +1,6 @@
 import axios from 'axios';
 import QS from 'qs'; /*qs 是一个增加了一些安全性的查询字符串解析和序列化字符串的库*/
+import store from '../store/index';
 
 //自动切换环境
 // if (process.env.NODE_ENV == 'development'){
@@ -17,7 +18,8 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 
 //对外接口
 export function request({method, url, params,type}){
-   switch (type){
+  store.dispatch("changeLogin",true)
+  switch (type){
      case "yy":
        axios.defaults.baseURL = '/api1'
        break;
@@ -34,13 +36,18 @@ export function request({method, url, params,type}){
     return post(url, params);
   }
 }
-
 // 封装get方法
 function get(url, params){
   return new Promise((resolve, reject) =>{
     axios.get(url, {params:params}).then(res =>{
+      setTimeout(function () {
+        store.dispatch("changeLogin",false)
+      },600)
       resolve(res.data);
     }).catch(err =>{
+      setTimeout(function () {
+        store.dispatch("changeLogin",false)
+      },600)
       reject(err.data);
     })
   });
@@ -52,9 +59,14 @@ function post(url, params){
   return new Promise((resolve, reject) =>{
     axios.post(url, QS.stringify(params)).then(res =>{
       resolve(res.data);
+      setTimeout(function () {
+        store.dispatch("changeLogin",false)
+      },600)
     }).catch(err =>{
       reject(err.data);
-    })
+      setTimeout(function () {
+        store.dispatch("changeLogin",false)
+      },600)  })
 
   });
 }

@@ -52,6 +52,22 @@ export default new Router({
             title: 'myGirl'
           }
         },
+        {
+          path: '/scroller',
+          //name: 'HelloWorld',
+          component: () => import('@/components/scroller'),/*懒加载路由 防止路由过多页面加载慢*/
+          meta: {
+            title: 'scroll'
+          }
+        },
+        {
+          path: '/game',
+          //name: 'HelloWorld',
+          component: () => import('@/components/game'),/*懒加载路由 防止路由过多页面加载慢*/
+          meta: {
+            title: 'game'
+          }
+        },
       ]
     }
 

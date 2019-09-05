@@ -30,7 +30,15 @@ export default {
     }
   },
   created:function(){
-    //$('#myTips').modal('show')
+    //var  _this=this
+    // setInterval(function () {
+    //
+    //   _this.$store.dispatch("changeLogin",!_this.$store.state.loadingCtrl)
+    //   console.log(_this.$store.state.loadingCtrl)
+    //
+    // },1000000)
+   // this.$store.dispatch("changeLogin",true)
+   //  console.log(this.$store.state.loadingCtrl)
   },
   methods:{
     login:function () {

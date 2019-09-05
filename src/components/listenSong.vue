@@ -65,7 +65,6 @@
             }
             var _this=this
             request(requestData).then(function (data) {
-              console.log(data)
               _this.songData=data.result
 
             })

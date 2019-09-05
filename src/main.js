@@ -5,7 +5,8 @@ import App from './App'
 import router from './router'
 import store from './store/index'
 import   './commonJS/watchRoute'
-
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller)
 
 
 
@@ -17,9 +18,13 @@ import "./CSS/main.css";
 /*注册全局组件*/
 import VDistpicker from 'v-distpicker'
 import commonTips from './components/commonCmt/tips'
+import loading from './components/commonCmt/loading'
 
-Vue.component('v-distpicker',VDistpicker,);
-Vue.component('common-Tip',commonTips,);
+
+Vue.component('v-distpicker',VDistpicker);
+Vue.component('common-Tip',commonTips);
+Vue.component('common-loading',loading);
+
 
 Vue.config.productionTip = false
 

@@ -15,7 +15,7 @@
         name: "navL",
       data(){
           return{
-            navList:[{route:'/weather',title:'天气查询'},{route:'/listenSong',title:'音悦台'},{route:'/myGirl',title:'myGirl'}]
+            navList:[{route:'/weather',title:'天气查询'},{route:'/listenSong',title:'音悦台'},{route:'/myGirl',title:'myGirl'},{route:'/scroller',title:'scroll'},{route:'/game',title:'game'}]
         }
       },
       created:function () {
